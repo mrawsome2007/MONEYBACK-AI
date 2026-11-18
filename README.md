@@ -52,7 +52,7 @@ MONEYBACK AI is an evidence-led consumer assistant that helps people organise pu
 
    ```env
    GEMINI_API_KEY=your_real_key
-   GEMINI_MODEL=gemini-2.5-flash
+   GEMINI_MODEL=gemini-3.8-flash
    PORT=5000
    CLIENT_ORIGIN=http://localhost:5173
    ```

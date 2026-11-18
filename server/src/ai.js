@@ -49,7 +49,7 @@ Rules:
 - Do not include markdown fences or explanatory text outside JSON.`;
 
   const response = await ai.models.generateContent({
-    model: process.env.GEMINI_MODEL || "gemini-2.5-flash",
+    model: process.env.GEMINI_MODEL || "gemini-3.8-flash",
     contents: [{
       role: "user",
       parts: [
@@ -78,7 +78,7 @@ ${JSON.stringify(input, null, 2)}
 
 Return only the message body.`;
   const response = await ai.models.generateContent({
-    model: process.env.GEMINI_MODEL || "gemini-2.5-flash",
+    model: process.env.GEMINI_MODEL || "gemini-3.8-flash",
     contents: prompt,
     config: { temperature: 0.3 }
   });
