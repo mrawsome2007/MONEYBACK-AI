@@ -8,7 +8,7 @@ import { extractPurchaseDocument, createSupportMessage } from "./ai.js";
 import { messageSchema } from "./validation.js";
 
 const app = express();
-const PORT = Number(process.env.PORT || 5000);
+const PORT = Number(process.env.PORT || 8080);
 const allowedOrigins = (process.env.CLIENT_ORIGIN || "http://localhost:5173").split(",").map((x) => x.trim());
 
 app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
@@ -57,6 +57,6 @@ app.use((error, _req, res, _next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`MONEYBACK AI API listening on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`MONEYBACK AI API listening on port ${PORT}`);
 });
