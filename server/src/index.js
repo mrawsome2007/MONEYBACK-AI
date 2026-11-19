@@ -79,7 +79,7 @@ app.post("/api/generate-message", async (req, res, next) => {
 });
 
 // Serve built Vite frontend from client/dist
-const distPath = path.resolve(__dirname, "..", "client", "dist");
+const distPath = path.resolve(__dirname, "..", "..", "client", "dist");
 const indexHtmlPath = path.join(distPath, "index.html");
 
 if (fs.existsSync(indexHtmlPath)) {
